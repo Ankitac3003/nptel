@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Certificate</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 7px 14px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(21, 167, 224);
+            color: white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="downloadCertificate()">Course Certificate</button>
+
+    <script>
+        function downloadCertificate() {
+            // Create an anchor element
+            var link = document.createElement("a");
+            // Set the href attribute to the URL of the certificate image
+            link.href = "IOT ANKIT NEW.pdf";
+            // Set the download attribute to specify the filename
+            link.download = "IOT ANKIT NEW.pdf";
+            // Append the anchor element to the document body
+            document.body.appendChild(link);
+            // Trigger a click event on the anchor element
+            link.click();
+            // Remove the anchor element from the document body
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
